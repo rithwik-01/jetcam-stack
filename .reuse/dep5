@@ -1,0 +1,12 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: JetCam Stack
+Source: https://github.com/rithwik-01/jetcam-stack
+
+Files: *
+Copyright: 2026 JetCam Stack contributors
+License: MIT
+
+Files: driver/patches/*
+Copyright: Upstream NVIDIA and Linux kernel contributors
+           2026 JetCam Stack contributors
+License: GPL-2.0-only

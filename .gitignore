@@ -1,0 +1,22 @@
+# Build products
+/build/
+/out/
+/release/
+*.o
+*.so
+*.a
+
+# Local editor and OS files
+.DS_Store
+.idea/
+.vscode/
+
+# Local planning and camera captures
+/JetCam_Stack_Project_Plan.md
+/cam1_imx219_check_*.jpg
+
+# Runtime captures (baseline text records remain tracked)
+*.raw
+*.h264
+*.mp4
+*.ts
