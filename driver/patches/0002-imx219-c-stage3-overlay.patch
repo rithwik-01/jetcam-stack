@@ -1,0 +1,20 @@
+--- a/hardware/nvidia/t23x/nv-public/overlay/tegra234-p3767-camera-p3768-imx219-C.dts	2026-01-14 23:32:30
++++ b/hardware/nvidia/t23x/nv-public/overlay/tegra234-p3767-camera-p3768-imx219-C.dts	2026-08-07 06:18:13
+@@ -12,7 +12,7 @@
+ #include <dt-bindings/tegra234-p3767-0000-common.h>
+ 
+ / {
+-	overlay-name = "Camera IMX219-C";
++	overlay-name = "JetCam Stack IMX219-C (stage 3)";
+ 	jetson-header-name = "Jetson 22pin CSI Connector";
+ 	compatible = JETSON_COMPATIBLE_P3768;
+ 
+@@ -108,6 +108,7 @@
+ 						#address-cells = <1>;
+ 						#size-cells = <0>;
+ 						rbpcv2_imx219_c@10 {
++							jetcam,stage3-revision = "test-pattern-v1";
+ 							reset-gpios = <&gpio CAM1_PWDN GPIO_ACTIVE_HIGH>;
+ 							compatible = "sony,imx219";
+ 							/* I2C device address */
+

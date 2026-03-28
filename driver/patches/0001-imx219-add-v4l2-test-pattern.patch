@@ -1,0 +1,133 @@
+--- a/nvidia-oot/include/media/camera_common.h	2026-01-14 23:33:18
++++ b/nvidia-oot/include/media/camera_common.h	2026-08-07 06:27:08
+@@ -200,6 +200,8 @@
+ 			struct sensor_blob *blob, s64 val);
+ 	int (*set_group_hold_ex)(struct tegracam_device *tc_dev,
+ 			struct sensor_blob *blob, bool val);
++	/* Append-only keeps existing offsets; modversion consumers must relink. */
++	int (*set_test_pattern)(struct tegracam_device *tc_dev, s32 val);
+ };
+ 
+ struct tegracam_ctrl_handler {
+--- a/nvidia-oot/drivers/media/platform/tegra/camera/tegracam_ctrls.c	2026-01-14 23:33:18
++++ b/nvidia-oot/drivers/media/platform/tegra/camera/tegracam_ctrls.c	2026-08-07 06:18:13
+@@ -50,13 +50,32 @@
+ 
+ static const u32 tegracam_sync_cids[] = {
+ 	TEGRA_CAMERA_CID_ALTERNATING_EXPOSURE,
++	V4L2_CID_TEST_PATTERN,
+ };
+ #define NUM_SYNC_CTRLS ARRAY_SIZE(tegracam_sync_cids)
+ 
++static const char * const tegracam_test_pattern_menu[] = {
++	"Disabled",
++	"Solid Color",
++	"Color Bars",
++	"Grey Color",
++	"PN9",
++};
++
+ static struct v4l2_ctrl_config ctrl_cfg_list[] = {
+ /* Do not change the name field for the controls! */
+ 	{
+ 		.ops = &tegracam_ctrl_ops,
++		.id = V4L2_CID_TEST_PATTERN,
++		.name = "Test Pattern",
++		.type = V4L2_CTRL_TYPE_MENU,
++		.min = 0,
++		.max = ARRAY_SIZE(tegracam_test_pattern_menu) - 1,
++		.def = 0,
++		.qmenu = tegracam_test_pattern_menu,
++	},
++	{
++		.ops = &tegracam_ctrl_ops,
+ 		.id = TEGRA_CAMERA_CID_GAIN,
+ 		.name = "Gain",
+ 		.type = V4L2_CTRL_TYPE_INTEGER64,
+@@ -343,6 +362,9 @@
+ 		break;
+ 	case TEGRA_CAMERA_CID_GROUP_HOLD:
+ 		err = ops->set_group_hold(tc_dev, ctrl->val);
++		break;
++	case V4L2_CID_TEST_PATTERN:
++		err = ops->set_test_pattern(tc_dev, ctrl->val);
+ 		break;
+ 	case TEGRA_CAMERA_CID_ALTERNATING_EXPOSURE:
+ 		err = ops->set_alternating_exposure(tc_dev,
+@@ -479,6 +501,10 @@
+ 				if (ops->set_alternating_exposure != NULL)
+ 					err = ops->set_alternating_exposure(tc_dev,
+ 						(struct alternating_exposure_cfg *)ptr);
++				break;
++			case V4L2_CID_TEST_PATTERN:
++				if (ops->set_test_pattern != NULL)
++					err = ops->set_test_pattern(tc_dev, ctrl->val);
+ 				break;
+ 			default:
+ 				dev_err(dev, "%s: synchronization of control with cid %x not implemented\n",
+@@ -773,6 +799,13 @@
+ 			dev_err(dev,
+ 				"TEGRA_CAMERA_CID_GROUP_HOLD contorl is enabled in framework by default, no need to add it in driver\n");
+ 			return -EINVAL;
++		case V4L2_CID_TEST_PATTERN:
++			if (ops->set_test_pattern == NULL)
++				dev_err(dev,
++					"Missing V4L2_CID_TEST_PATTERN implementation\n");
++			else
++				sensor_ops++;
++			break;
+ 		case TEGRA_CAMERA_CID_EEPROM_DATA:
+ 			if (tegracam_get_string_ctrl_size(
+ 					TEGRA_CAMERA_CID_EEPROM_DATA, ops) == 0)
+--- a/nvidia-oot/drivers/media/i2c/nv_imx219.c	2026-01-14 23:33:18
++++ b/nvidia-oot/drivers/media/i2c/nv_imx219.c	2026-08-07 06:18:13
+@@ -42,6 +42,9 @@
+ #define IMX219_COARSE_INTEG_TIME_ADDR_LSB	0x015b
+ #define IMX219_FINE_INTEG_TIME_ADDR_MSB		0x0388
+ #define IMX219_FINE_INTEG_TIME_ADDR_LSB		0x0389
++#define IMX219_TEST_PATTERN_ADDR_MSB		0x0600
++#define IMX219_TEST_PATTERN_ADDR_LSB		0x0601
++#define IMX219_TEST_PATTERN_MAX			4
+ 
+ static const struct of_device_id imx219_of_match[] = {
+ 	{ .compatible = "sony,imx219", },
+@@ -54,6 +57,7 @@
+ 	TEGRA_CAMERA_CID_EXPOSURE,
+ 	TEGRA_CAMERA_CID_FRAME_RATE,
+ 	TEGRA_CAMERA_CID_SENSOR_MODE_ID,
++	V4L2_CID_TEST_PATTERN,
+ };
+ 
+ struct imx219 {
+@@ -294,6 +298,23 @@
+ 	}
+ 
+ 	return 0;
++}
++
++static int imx219_set_test_pattern(struct tegracam_device *tc_dev, s32 val)
++{
++	struct camera_common_data *s_data = tc_dev->s_data;
++	int err;
++
++	if (val < 0 || val > IMX219_TEST_PATTERN_MAX)
++		return -EINVAL;
++
++	/* IMX219 test-pattern mode is a big-endian 16-bit register. */
++	err = imx219_write_reg(s_data, IMX219_TEST_PATTERN_ADDR_MSB, 0);
++	if (err)
++		return err;
++
++	return imx219_write_reg(s_data, IMX219_TEST_PATTERN_ADDR_LSB,
++		(u8)val);
+ }
+ 
+ static struct tegracam_ctrl_ops imx219_ctrl_ops = {
+@@ -303,6 +324,7 @@
+ 	.set_exposure = imx219_set_exposure,
+ 	.set_frame_rate = imx219_set_frame_rate,
+ 	.set_group_hold = imx219_set_group_hold,
++	.set_test_pattern = imx219_set_test_pattern,
+ };
+ 
+ static int imx219_power_on(struct camera_common_data *s_data)
