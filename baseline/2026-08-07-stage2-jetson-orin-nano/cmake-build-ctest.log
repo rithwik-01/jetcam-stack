@@ -1,0 +1,27 @@
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /tmp/jetcam-stage2-019fdbee/cmake-build
+[ 50%] Building CXX object app/jetcam-raw-test/CMakeFiles/jetcam-raw-test.dir/src/main.cpp.o
+[ 50%] Building CXX object app/jetcam-raw-test/CMakeFiles/jetcam-raw-test-stats-test.dir/tests/stats_test.cpp.o
+[ 75%] Linking CXX executable jetcam-raw-test-stats-test
+[ 75%] Built target jetcam-raw-test-stats-test
+[100%] Linking CXX executable jetcam-raw-test
+[100%] Built target jetcam-raw-test
+Internal ctest changing into directory: /tmp/jetcam-stage2-019fdbee/cmake-build
+Test project /tmp/jetcam-stage2-019fdbee/cmake-build
+    Start 1: jetcam-raw-test-stats
+1/3 Test #1: jetcam-raw-test-stats ............   Passed    0.00 sec
+    Start 2: jetcam-raw-test-help
+2/3 Test #2: jetcam-raw-test-help .............   Passed    0.00 sec
+    Start 3: jetcam-raw-test-invalid-option
+3/3 Test #3: jetcam-raw-test-invalid-option ...   Passed    0.00 sec
+
+100% tests passed, 0 tests failed out of 3
+
+Total Test time (real) =   0.01 sec

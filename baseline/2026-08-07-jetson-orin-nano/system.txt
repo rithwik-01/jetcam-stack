@@ -1,0 +1,110 @@
+# host=jetson@JETSON_IP
+# collected_at=2026-08-07T03:46:00-0600
+# generated_by=scripts/collect-baseline.sh
+
+===== hostnamectl =====
+ Static hostname: ubuntu
+       Icon name: computer
+      Machine ID: <redacted>
+         Boot ID: <redacted>
+Operating System: Ubuntu 22.04.5 LTS
+          Kernel: Linux 5.15.185-tegra
+    Architecture: arm64
+ Hardware Vendor: NVIDIA
+  Hardware Model: NVIDIA Jetson Orin Nano Engineering Reference Developer Kit Super
+===== /etc/os-release =====
+PRETTY_NAME="Ubuntu 22.04.5 LTS"
+NAME="Ubuntu"
+VERSION_ID="22.04"
+VERSION="22.04.5 LTS (Jammy Jellyfish)"
+VERSION_CODENAME=jammy
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=jammy
+===== /etc/nv_tegra_release =====
+# R36 (release), REVISION: 5.0, GCID: 43688277, BOARD: generic, EABI: aarch64, DATE: Fri Jan 16 03:50:45 UTC 2026
+# KERNEL_VARIANT: oot
+TARGET_USERSPACE_LIB_DIR=nvidia
+TARGET_USERSPACE_LIB_DIR_PATH=usr/lib/aarch64-linux-gnu/nvidia
+===== uname -a =====
+Linux ubuntu 5.15.185-tegra #1 SMP PREEMPT Thu Jan 15 19:24:38 PST 2026 aarch64 aarch64 aarch64 GNU/Linux
+===== NVIDIA packages =====
+nvidia-jetpack	6.2.3+b81
+nvidia-jetpack-dev	6.2.3+b81
+nvidia-jetpack-runtime	6.2.3+b81
+nvidia-l4t-core	36.5.0-20260115194252
+nvidia-l4t-gstreamer	36.5.0-20260115194252
+nvidia-l4t-kernel	5.15.185-tegra-36.5.0-20260115194252
+===== tool versions =====
+v4l2-ctl 1.22.1
+media-ctl 1.22.1
+gst-launch-1.0 version 1.20.3
+GStreamer 1.20.3
+https://launchpad.net/distros/ubuntu/+source/gstreamer1.0
+===== selected GStreamer plugins =====
+--- nvarguscamerasrc
+Factory Details:
+  Rank                     primary (256)
+  Long-name                NvArgusCameraSrc
+  Klass                    Video/Capture
+  Description              nVidia ARGUS Camera Source
+  Author                   Viranjan Pagar <vpagar@nvidia.com>, Amit Pandya <apandya@nvidia.com>
+
+Plugin Details:
+  Name                     nvarguscamerasrc
+  Description              nVidia ARGUS Source Component
+  Filename                 /usr/lib/aarch64-linux-gnu/gstreamer-1.0/libgstnvarguscamerasrc.so
+  Version                  1.0.0
+  License                  Proprietary
+  Source module            nvarguscamerasrc
+  Binary package           NvARGUSCameraSrc
+  Origin URL               http://nvidia.com/
+
+GObject
+ +----GInitiallyUnowned
+       +----GstObject
+             +----GstElement
+                   +----GstBaseSrc
+                         +----GstNvArgusCameraSrc
+
+Pad Templates:
+  SRC template: 'src'
+    Availability: Always
+    Capabilities:
+--- nvv4l2h264enc
+No such element or plugin 'nvv4l2h264enc'
+--- nvvidconv
+Factory Details:
+  Rank                     primary (256)
+  Long-name                NvVidConv Plugin
+  Klass                    Filter/Converter/Video/Scaler
+  Description              Converts video from one colorspace to another & Resizes
+  Author                   amit pandya <apandya@nvidia.com>
+
+Plugin Details:
+  Name                     nvvidconv
+  Description              video Colorspace conversion & scaler
+  Filename                 /usr/lib/aarch64-linux-gnu/gstreamer-1.0/libgstnvvidconv.so
+  Version                  1.2.3
+  License                  Proprietary
+  Source module            gstreamer-nvvconv-plugin
+  Binary package           GStreamer nvvconv Plugin
+  Origin URL               http://nvidia.com/
+
+GObject
+ +----GInitiallyUnowned
+       +----GstObject
+             +----GstElement
+                   +----GstBaseTransform
+                         +----Gstnvvconv
+
+Pad Templates:
+  SINK template: 'sink'
+    Availability: Always
+    Capabilities:
+
+# ssh_exit_status=0

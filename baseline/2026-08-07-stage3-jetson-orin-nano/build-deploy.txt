@@ -1,0 +1,32 @@
+# Jetson Linux R36.5 / Linux 5.15.185-tegra
+# source: NVIDIA official public_sources.tbz2, kernel_oot_modules_src.tbz2
+# final boot id: <redacted>
+
+parent_media_flags=all_present
+-DCONFIG_V4L2_ASYNC
+-DCONFIG_V4L2_FWNODE
+-DCONFIG_VIDEOBUF2_DMA_CONTIG
+
+installed SHA-256:
+f8add81c3da57e19a86860c1bffacf5d982edfabccbf4ae2828eeb33156ee5db  tegra-camera.ko
+7f1c245ab6d95481111f79139db33c202766f188536f4d15f4856a1444a12ab8  nv_imx219.ko
+8faf85e88ea88f0b9884431e24852b31ca5a9703f4a09346a88834bfd9be5520  nvhost-nvcsi.ko
+bf983cb78bf514629ffdcbc222af04bb157b74c62ad0c028a046d7a9802481c8  nvhost-nvcsi-t194.ko
+42e7fd00324b8698ac4e05cb2e639325f2ad07fae7e9f4c090bee02e4ed5551d  tegra234-p3767-camera-p3768-imx219-C.dtbo
+
+consumer requirements == tegra-camera exports:
+0x4612009e  tegracam_v4l2subdev_register
+0xd038a2f2  tegracam_set_privdata
+0x48b2f437  tegracam_device_register
+0x06e9e8ec  tegra_csi_media_controller_remove
+0x960f93f1  tegra_csi_media_controller_init
+0xedda5db8  csi5_fops
+
+backup=/var/backups/jetcam-stage3-20260807
+backup contents:
+extlinux.conf
+nv_imx219.ko
+nvhost-nvcsi.ko
+nvhost-nvcsi-t194.ko
+tegra-camera.ko
+tegra234-p3767-camera-p3768-imx219-C.dtbo

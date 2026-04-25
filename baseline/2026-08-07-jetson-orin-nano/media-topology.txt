@@ -1,0 +1,39 @@
+# host=jetson@JETSON_IP
+# collected_at=2026-08-07T03:46:02-0600
+# generated_by=scripts/collect-baseline.sh
+
+Media controller API version 5.15.185
+
+Media device information
+------------------------
+driver          tegra-camrtc-ca
+model           NVIDIA Tegra Video Input Device
+serial          
+bus info        
+hw revision     0x3
+driver version  5.15.185
+
+Device topology
+- entity 1: 13e00000.host1x:nvcsi@15a00000- (2 pads, 2 links)
+            type V4L2 subdev subtype Unknown flags 0
+            device node name /dev/v4l-subdev0
+	pad0: Sink
+		<- "imx219 9-0010":0 [ENABLED]
+	pad1: Source
+		-> "vi-output, imx219 9-0010":0 [ENABLED]
+
+- entity 4: imx219 9-0010 (1 pad, 1 link)
+            type V4L2 subdev subtype Sensor flags 0
+            device node name /dev/v4l-subdev1
+	pad0: Source
+		[fmt:SRGGB10_1X10/1280x720@1/60 field:none colorspace:srgb]
+		-> "13e00000.host1x:nvcsi@15a00000-":0 [ENABLED]
+
+- entity 6: vi-output, imx219 9-0010 (1 pad, 1 link)
+            type Node subtype V4L flags 0
+            device node name /dev/video0
+	pad0: Sink
+		<- "13e00000.host1x:nvcsi@15a00000-":1 [ENABLED]
+
+
+# ssh_exit_status=0

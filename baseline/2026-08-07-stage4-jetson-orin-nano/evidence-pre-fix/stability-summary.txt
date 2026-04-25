@@ -1,0 +1,13 @@
+tj@55.562C
+RAM 2449/7607MB
+metric=frames frames=106871 fps=59.9994
+metric=frames frames=107172 fps=60.2004
+metric=frames frames=107472 fps=59.9997
+metric=frames frames=107772 fps=59.9997
+metric=frames frames=108072 fps=60.0005
+metric=frames frames=108373 fps=60.1995
+GST_ARGUS: Cleaning up
+CONSUMER: Done Success
+GST_ARGUS: Done Success
+state=STOPPED frames=108469
+STAGE4_STABILITY_RESULT=PASS duration_seconds=1800

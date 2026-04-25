@@ -1,0 +1,25 @@
+device=/dev/video0
+driver=tegra-video
+card=vi-output, imx219 9-0010
+bus=platform:tegra-capture-vi:2
+format=RG10
+mode_720p=1280x720@60
+
+Image Processing Controls
+
+test_pattern 0x009f0903 (menu) : min=0 max=4 default=0 value=0 (Disabled)
+    0: Disabled
+    1: Solid Color
+    2: Color Bars
+    3: Grey Color
+    4: PN9
+
+runtime device-tree node:
+/proc/device-tree/bus@0/cam_i2cmux/i2c@1/rbpcv2_imx219_c@10
+jetcam,stage3-revision=test-pattern-v1
+
+loaded modules:
+nv_imx219
+nvhost_nvcsi
+nvhost_nvcsi_t194
+tegra_camera

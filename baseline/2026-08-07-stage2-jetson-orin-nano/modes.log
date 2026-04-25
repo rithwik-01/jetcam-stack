@@ -1,0 +1,13 @@
+CAPABILITY driver=tegra-video card="vi-output, imx219 9-0010" bus="platform:tegra-capture-vi:2" version=5.15.185 streaming=true
+FORMAT index=0 fourcc=RG10 description="10-bit Bayer RGRG/GBGB"
+SIZE fourcc=RG10 width=3280 height=2464
+INTERVAL fourcc=RG10 width=3280 height=2464 numerator=1 denominator=21 fps=21.000
+SIZE fourcc=RG10 width=3280 height=1848
+INTERVAL fourcc=RG10 width=3280 height=1848 numerator=1 denominator=28 fps=28.000
+SIZE fourcc=RG10 width=1920 height=1080
+INTERVAL fourcc=RG10 width=1920 height=1080 numerator=1 denominator=30 fps=30.000
+SIZE fourcc=RG10 width=1640 height=1232
+INTERVAL fourcc=RG10 width=1640 height=1232 numerator=1 denominator=30 fps=30.000
+SIZE fourcc=RG10 width=1280 height=720
+INTERVAL fourcc=RG10 width=1280 height=720 numerator=1 denominator=60 fps=60.000
+RESULT status=PASS operation=list

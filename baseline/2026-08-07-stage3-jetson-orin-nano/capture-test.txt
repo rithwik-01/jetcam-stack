@@ -1,0 +1,20 @@
+disabled_control:
+test_pattern: 0 (Disabled)
+RESULT status=PASS frames=120 first_sequence=0 last_sequence=119 dropped=0 discontinuities=0 buffer_errors=0 capture_seconds=1.980 wall_seconds=2.035 actual_fps=60.116 requested_fps=60.000 negotiated_fps=60.000 width=1280 height=720 fourcc=RG10 snapshot_saved=true
+
+color_bars_control:
+test_pattern: 2 (Color Bars)
+RESULT status=PASS frames=120 first_sequence=0 last_sequence=119 dropped=0 discontinuities=0 buffer_errors=0 capture_seconds=1.980 wall_seconds=2.035 actual_fps=60.116 requested_fps=60.000 negotiated_fps=60.000 width=1280 height=720 fourcc=RG10 snapshot_saved=true
+RESULT status=PASS frames=120 first_sequence=0 last_sequence=119 dropped=0 discontinuities=0 buffer_errors=0 capture_seconds=1.980 wall_seconds=2.035 actual_fps=60.116 requested_fps=60.000 negotiated_fps=60.000 width=1280 height=720 fourcc=RG10 snapshot_saved=true
+
+restored_control:
+test_pattern: 0 (Disabled)
+
+frame_size_bytes=1843200
+disabled_sha256=566b2629e5c994f00abb934cd71c33d0d4cddb1af5cdc239c2aef92fa345ea0f
+color_bars_a_sha256=94ac40336529f5bbbd9bd49b636ef004d1a6ec0f3f0e47e6ebf35d03078114f2
+color_bars_b_sha256=7d0210ff0ed8cf576755e0eb452d70392aba55729bc607a35b70f366dcc533a1
+
+RAW16 effective-image comparison (rows 4..715):
+disabled_vs_bars MAE=6325.248 max=65535 within_64=0.000015 within_256=0.000037
+bars_a_vs_b MAE=54.723 max=705 within_64=0.821981 within_256=0.999150

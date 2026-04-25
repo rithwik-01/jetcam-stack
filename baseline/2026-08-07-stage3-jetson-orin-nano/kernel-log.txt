@@ -1,0 +1,15 @@
+# camera-related dmesg after final reboot and unload/reload test
+[    7.456552] platform 13e00000.host1x:nvcsi@15a00000: Fixing up cyclic dependency with 9-0010
+[    7.456572] platform 13e00000.host1x:nvcsi@15a00000: Fixing up cyclic dependency with tegra-capture-vi
+[    8.515525] nvhost_nvcsi: module verification failed: signature and/or required key missing - tainting kernel
+[    8.760001] tegra-camrtc-capture-vi tegra-capture-vi: subdev 13e00000.host1x:nvcsi@15a00000- bound
+[    9.279794] imx219 9-0010: tegracam sensor driver:imx219_v2.0.6
+[    9.298501] tegra-camrtc-capture-vi tegra-capture-vi: subdev imx219 9-0010 bound
+[  176.973472] tegra-camrtc-capture-vi tegra-capture-vi: subdev imx219 9-0010 unbind
+[  177.039567] imx219 9-0010: tegracam sensor driver:imx219_v2.0.6
+[  177.055663] tegra-camrtc-capture-vi tegra-capture-vi: subdev imx219 9-0010 bound
+
+No module-version mismatch, unknown symbol, probe failure, CSI error, capture timeout,
+kernel Warning/Oops, dropped frame, discontinuity, or buffer error was observed.
+The one module-verification line is expected for locally built modules because the
+NVIDIA kernel private signing key is not present; sig_enforce=N on this target.

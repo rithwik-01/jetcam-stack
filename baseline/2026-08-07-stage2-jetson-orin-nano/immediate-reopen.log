@@ -1,0 +1,8 @@
+CAPABILITY driver=tegra-video card="vi-output, imx219 9-0010" bus="platform:tegra-capture-vi:2" version=5.15.185 streaming=true
+CONTROL sensor_mode=4
+NEGOTIATED width=1280 height=720 fourcc=RG10 bytesperline=2560 sizeimage=1843200
+FRAME_RATE requested_fps=60.000 negotiated_fps=60.000
+MMAP buffers=4
+STREAM state=ON
+STREAM state=OFF
+RESULT status=PASS frames=2 first_sequence=0 last_sequence=1 dropped=0 discontinuities=0 buffer_errors=0 capture_seconds=0.017 wall_seconds=0.070 actual_fps=60.118 requested_fps=60.000 negotiated_fps=60.000 width=1280 height=720 fourcc=RG10 snapshot_saved=false

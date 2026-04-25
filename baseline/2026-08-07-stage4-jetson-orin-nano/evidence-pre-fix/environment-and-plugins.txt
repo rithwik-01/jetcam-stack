@@ -1,0 +1,18 @@
+Linux ubuntu 5.15.185-tegra #1 SMP PREEMPT Thu Jan 15 19:24:38 PST 2026 aarch64 aarch64 aarch64 GNU/Linux
+gst-inspect-1.0 version 1.20.3
+GStreamer 1.20.3
+https://launchpad.net/distros/ubuntu/+source/gstreamer1.0
+1.20.3
+1.20.1
+1.20.1
+	
+	
+	
+	
+nvarguscamerasrc=/usr/lib/aarch64-linux-gnu/gstreamer-1.0/libgstnvarguscamerasrc.so
+nvvidconv=/usr/lib/aarch64-linux-gnu/gstreamer-1.0/libgstnvvidconv.so
+x264enc=/usr/lib/aarch64-linux-gnu/gstreamer-1.0/libgstx264.so
+mpegtsmux=/usr/lib/aarch64-linux-gnu/gstreamer-1.0/libgstmpegtsmux.so
+jpegenc=/usr/lib/aarch64-linux-gnu/gstreamer-1.0/libgstjpeg.so
+rtph264pay=/usr/lib/aarch64-linux-gnu/gstreamer-1.0/libgstrtp.so
+No such element or plugin 'nvv4l2h264enc'

@@ -1,0 +1,44 @@
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /tmp/jetcam-stage4-20260807/build
+Consolidate compiler generated dependencies of target jetcam-raw-test-stats-test
+Consolidate compiler generated dependencies of target jetcam-raw-test
+Consolidate compiler generated dependencies of target jetcamd_config
+[ 25%] Built target jetcam-raw-test-stats-test
+[ 33%] Built target jetcam-raw-test
+[ 58%] Built target jetcamd_config
+Consolidate compiler generated dependencies of target jetcamd-config-test
+Consolidate compiler generated dependencies of target jetcamd
+[ 75%] Built target jetcamd-config-test
+[100%] Built target jetcamd
+Internal ctest changing into directory: /tmp/jetcam-stage4-20260807/build
+Test project /tmp/jetcam-stage4-20260807/build
+    Start 1: jetcam-raw-test-stats
+1/4 Test #1: jetcam-raw-test-stats ............   Passed    0.00 sec
+    Start 2: jetcam-raw-test-help
+2/4 Test #2: jetcam-raw-test-help .............   Passed    0.00 sec
+    Start 3: jetcam-raw-test-invalid-option
+3/4 Test #3: jetcam-raw-test-invalid-option ...   Passed    0.00 sec
+    Start 4: jetcamd-config-test
+4/4 Test #4: jetcamd-config-test ..............   Passed    0.00 sec
+
+100% tests passed, 0 tests failed out of 4
+
+Total Test time (real) =   0.02 sec
+sensor_id=0
+mode=1280x720@60
+encoder=x264-software
+bitrate_kbps=6000
+gop=60
+output=udp
+destination=udp://127.0.0.1:5000
+nvarguscamerasrc sensor-id=0 ! video/x-raw(memory:NVMM),format=NV12,width=1280,height=720,framerate=60/1 ! nvvidconv ! video/x-raw,format=I420 ! tee name=rawtee rawtee. ! queue max-size-buffers=4 leaky=downstream ! identity name=frame_probe silent=true ! x264enc tune=zerolatency speed-preset=ultrafast bitrate=6000 key-int-max=60 bframes=0 byte-stream=true aud=true sliced-threads=true ! video/x-h264,profile=baseline ! h264parse config-interval=1 ! mpegtsmux alignment=7 ! udpsink host=127.0.0.1 port=5000 sync=false async=false rawtee. ! queue max-size-buffers=1 leaky=downstream ! valve name=snapshot_valve drop=true ! videoconvert ! jpegenc quality=90 ! appsink name=snapshot_sink emit-signals=true max-buffers=1 drop=true sync=false
+sensor_id=0
+mode=1280x720@60
+encoder=x264-software
+bitrate_kbps=6000
+gop=60
+output=rtsp
+destination=rtsp://0.0.0.0:8554/jetcam
+nvarguscamerasrc sensor-id=0 ! video/x-raw(memory:NVMM),format=NV12,width=1280,height=720,framerate=60/1 ! nvvidconv ! video/x-raw,format=I420 ! identity name=frame_probe silent=true ! x264enc tune=zerolatency speed-preset=ultrafast bitrate=6000 key-int-max=60 bframes=0 byte-stream=true aud=true sliced-threads=true ! video/x-h264,profile=baseline ! h264parse config-interval=1 ! rtph264pay pt=96 config-interval=1 ! udpsink host=127.0.0.1 port=5400 sync=false async=false
+( udpsrc address=127.0.0.1 port=5400 caps="application/x-rtp,media=video,encoding-name=H264,payload=96,clock-rate=90000" ! rtph264depay ! rtph264pay name=pay0 pt=96 config-interval=1 )

@@ -1,0 +1,10 @@
+sensor_id=0
+mode=1280x720@60
+encoder=x264-software
+bitrate_kbps=6000
+gop=60
+output=rtsp
+destination=rtsp://0.0.0.0:8554/jetcam
+state=STREAMING url=rtsp://0.0.0.0:8554/jetcam
+(Argus) Error InvalidState: Argus client is exiting with 3 outstanding client threads (in src/rpc/socket/client/ClientSocketManager.cpp, function recvThreadCore(), line 366)
+(Argus) Error InvalidState: No valid socket for dispatch() (in src/rpc/socket/client/SocketClientDispatch.cpp, function dispatch(), line 85)

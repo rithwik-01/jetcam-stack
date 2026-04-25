@@ -1,0 +1,596 @@
+[0000aaab08b85270] main libvlc debug: VLC media player - 3.0.16 Vetinari
+[0000aaab08b85270] main libvlc debug: Copyright © 1996-2021 the VideoLAN team
+[0000aaab08b85270] main libvlc debug: revision 3.0.13-8-g41878ff4f2
+[0000aaab08b85270] main libvlc debug: configured with ./configure  '--build=aarch64-linux-gnu' '--prefix=/usr' '--includedir=${prefix}/include' '--mandir=${prefix}/share/man' '--infodir=${prefix}/share/info' '--sysconfdir=/etc' '--localstatedir=/var' '--disable-option-checking' '--disable-silent-rules' '--libdir=${prefix}/lib/aarch64-linux-gnu' '--runstatedir=/run' '--disable-maintainer-mode' '--disable-dependency-tracking' '--disable-debug' '--config-cache' '--disable-update-check' '--enable-fast-install' '--docdir=/usr/share/doc/vlc' '--with-binary-version=3.0.16-1build7' '--enable-a52' '--enable-aa' '--enable-aribsub' '--enable-avahi' '--enable-bluray' '--enable-caca' '--enable-chromaprint' '--enable-chromecast' '--enable-dav1d' '--enable-dbus' '--enable-dca' '--enable-dvbpsi' '--enable-dvdnav' '--enable-faad' '--enable-flac' '--enable-fluidsynth' '--enable-freetype' '--enable-fribidi' '--enable-gles2' '--enable-gnutls' '--enable-harfbuzz' '--enable-jack' '--enable-kate' '--enable-libass' '--enable-libmpeg2' '--enable-libxml2' '--enable-lirc' '--enable-mad' '--enable-matroska' '--enable-mod' '--enable-mpc' '--enable-mpg123' '--enable-mtp' '--enable-ncurses' '--enable-notify' '--enable-ogg' '--enable-opus' '--enable-pulse' '--enable-qt' '--enable-realrtsp' '--enable-samplerate' '--enable-sdl-image' '--enable-sftp' '--enable-shine' '--enable-shout' '--enable-skins2' '--enable-sndio' '--enable-soxr' '--enable-spatialaudio' '--enable-speex' '--enable-svg' '--enable-svgdec' '--enable-taglib' '--enable-theora' '--enable-twolame' '--enable-upnp' '--enable-vdpau' '--enable-vnc' '--enable-vorbis' '--enable-x264' '--enable-x265' '--enable-zvbi' '--with-kde-solid=/usr/share/solid/actions/' '--disable-aom' '--disable-crystalhd' '--disable-d3d11va' '--disable-decklink' '--disable-directx' '--disable-dsm' '--disable-dxva2' '--disable-fdkaac' '--disable-fluidlite' '--disable-freerdp' '--disable-goom' '--disable-gst-decode' '--disable-libtar' '--disable-live555' '--disable-macosx' '--disable-macosx-avfoundation' '--disable-macosx-qtkit' '--disable-mfx' '--disable-microdns' '--disable-opencv' '--disable-projectm' '--disable-schroedinger' '--disable-sparkle' '--disable-srt' '--disable-telx' '--disable-vpx' '--disable-vsxu' '--disable-wasapi' '--enable-alsa' '--enable-dc1394' '--enable-dv1394' '--enable-libplacebo' '--enable-linsys' '--enable-nfs' '--enable-udev' '--enable-v4l2' '--enable-wayland' '--enable-libva' '--enable-vcd' '--enable-smbclient' '--disable-oss' '--disable-mmx' '--disable-sse' '--disable-neon' '--disable-altivec' '--disable-omxil' 'build_alias=aarch64-linux-gnu' 'CFLAGS=-g -O2 -ffile-prefix-map=/build/vlc-QfgK0S/vlc-3.0.16=. -flto=auto -ffat-lto-objects -flto=auto -ffat-lto-objects -fstack-protector-strong -Wformat -Werror=format-security ' 'LDFLAGS=-Wl,-Bsymbolic-functions -flto=auto -ffat-lto-objects -flto=auto -Wl,-z,relro -Wl,-z,now' 'CPPFLAGS=-Wdate-time -D_FORTIFY_SOURCE=2' 'CXXFLAGS=-g -O2 -ffile-prefix-map=/build/vlc-QfgK0S/vlc-3.0.16=. -flto=auto -ffat-lto-objects -flto=auto -ffat-lto-objects -fstack-protector-strong -Wformat -Werror=format-security ' 'OBJCFLAGS=-g -O2 -ffile-prefix-map=/build/vlc-QfgK0S/vlc-3.0.16=. -flto=auto -ffat-lto-objects -flto=auto -ffat-lto-objects -fstack-protector-strong -Wformat -Werror=format-security'
+[0000aaab08b85270] main libvlc debug: searching plug-in modules
+[0000aaab08b85270] main libvlc debug: loading plugins cache file /usr/lib/aarch64-linux-gnu/vlc/plugins/plugins.dat
+[0000aaab08b85270] main libvlc debug: recursively browsing `/usr/lib/aarch64-linux-gnu/vlc/plugins'
+[0000aaab08b85270] main libvlc debug: plug-ins loaded: 513 modules
+[0000aaab08b85270] main libvlc debug: opening config file (/home/jetson/.config/vlc/vlcrc)
+[0000aaab08b855d0] main logger debug: looking for logger module matching "any": 4 candidates
+[0000aaab08b855d0] main logger debug: using logger module "console"
+[0000aaab08b85270] main libvlc debug: translation test: code is "C"
+[0000aaab08c20a40] main keystore debug: looking for keystore module matching "memory": 4 candidates
+[0000aaab08c20a40] main keystore debug: using keystore module "memory"
+[0000aaab08b85270] main libvlc debug: CPU has capabilities FPU 
+[0000aaab08c26960] main input debug: Creating an input for 'Media Library'
+[0000aaab08c26960] main input debug: Input is a meta file: disabling unneeded options
+[0000aaab08c26960] main input debug: using timeshift granularity of 50 MiB
+[0000aaab08c26960] main input debug: using default timeshift path
+[0000aaab08c26960] main input debug: `file/directory:///home/jetson/.local/share/vlc/ml.xspf' gives access `file' demux `directory' path `/home/jetson/.local/share/vlc/ml.xspf'
+[0000aaab08c20e70] main input source debug: creating demux: access='file' demux='directory' location='/home/jetson/.local/share/vlc/ml.xspf' file='/home/jetson/.local/share/vlc/ml.xspf'
+[0000aaab08c214c0] main demux debug: looking for access_demux module matching "file": 18 candidates
+[0000aaab08c214c0] main demux debug: no access_demux modules matched
+[0000aaab08c46b80] main stream debug: creating access: file:///home/jetson/.local/share/vlc/ml.xspf
+[0000aaab08c46b80] main stream debug:  (path: /home/jetson/.local/share/vlc/ml.xspf)
+[0000aaab08c46b80] main stream debug: looking for access module matching "file": 29 candidates
+[0000aaab08c46b80] main stream debug: using access module "filesystem"
+[0000aaab08c47d80] main stream debug: looking for stream_filter module matching "prefetch,cache_read": 26 candidates
+[0000aaab08c47d80] cache_read stream debug: Using stream method for AStream*
+[0000aaab08c47d80] cache_read stream debug: starting pre-buffering
+[0000aaab08c47d80] cache_read stream debug: received first data after 0 ms
+[0000aaab08c47d80] cache_read stream debug: pre-buffering done 296 bytes in 0s - 6283 KiB/s
+[0000aaab08c47d80] main stream debug: using stream_filter module "cache_read"
+[0000aaab08c48d30] main stream debug: looking for stream_filter module matching "any": 26 candidates
+[0000aaab08c48d30] playlist stream debug: using XSPF playlist reader
+[0000aaab08c48d30] main stream debug: using stream_filter module "playlist"
+[0000aaab08c48d30] main stream debug: stream filter added to 0xaaab08c47d80
+[0000aaab08c4c2d0] main stream debug: looking for stream_filter module matching "any": 26 candidates
+[0000aaab08c4c2d0] main stream debug: no stream_filter modules matched
+[0000aaab08c212e0] main stream_directory debug: looking for stream_directory module matching "any": 1 candidates
+[0000aaab08c212e0] main stream_directory debug: no stream_directory modules matched
+[0000aaab08c20e70] main input source debug: attachment of directory-extractor failed for file:///home/jetson/.local/share/vlc/ml.xspf
+[0000aaab08c4c2d0] main stream debug: looking for stream_filter module matching "record": 26 candidates
+[0000aaab08c4c2d0] main stream debug: using stream_filter module "record"
+[0000aaab08c20e70] main input source debug: creating demux: access='file' demux='directory' location='/home/jetson/.local/share/vlc/ml.xspf' file='/home/jetson/.local/share/vlc/ml.xspf'
+[0000aaab08c4f780] main demux debug: looking for demux module matching "directory": 54 candidates
+[0000aaab08c4f780] main demux debug: using demux module "directory"
+[0000aaab08c207d0] main demux meta debug: looking for meta reader module matching "any": 2 candidates
+[0000aaab08c207d0] lua demux meta debug: Trying Lua scripts in /home/jetson/.local/share/vlc/lua/meta/reader
+[0000aaab08c207d0] lua demux meta debug: Trying Lua scripts in /usr/lib/aarch64-linux-gnu/vlc/lua/meta/reader
+[0000aaab08c207d0] lua demux meta debug: Trying Lua playlist script /usr/lib/aarch64-linux-gnu/vlc/lua/meta/reader/filename.luac
+[0000aaab08c207d0] lua demux meta debug: Trying Lua scripts in /usr/share/vlc/lua/meta/reader
+[0000aaab08c207d0] main demux meta debug: no meta reader modules matched
+[0000aaab08c26960] main input debug: `file/directory:///home/jetson/.local/share/vlc/ml.xspf' successfully opened
+[0000aaab08c20c50] main xml reader debug: looking for xml reader module matching "any": 1 candidates
+[0000aaab08c20c50] main xml reader debug: using xml reader module "xml"
+[0000aaab08c26960] main input debug: EOF reached
+[0000aaab08c4f780] main demux debug: removing module "directory"
+[0000aaab08c4c2d0] main stream debug: removing module "record"
+[0000aaab08c48d30] main stream debug: removing module "playlist"
+[0000aaab08c47d80] main stream debug: removing module "cache_read"
+[0000aaab08c46b80] main stream debug: removing module "filesystem"
+[0000aaab08c1b140] main playlist debug: creating audio output
+[0000aaab08c55790] main audio output debug: looking for audio output module matching "dummy": 6 candidates
+[0000aaab08c55790] main audio output debug: using audio output module "adummy"
+[0000aaab08c1b140] main playlist debug: keeping audio output
+[0000aaab08c294e0] main interface debug: looking for interface module matching "dbus,none": 19 candidates
+[0000aaab08c294e0] dbus interface debug: listening on dbus as: org.mpris.MediaPlayer2.vlc
+[0000aaab08c294e0] main interface debug: using interface module "dbus"
+[0000aaab08c5fb30] main interface debug: looking for interface module matching "hotkeys,none": 19 candidates
+[0000aaab08c5fb30] main interface debug: using interface module "hotkeys"
+[0000aaab08c604d0] main interface debug: looking for interface module matching "globalhotkeys,none": 19 candidates
+[0000aaab08c604d0] main interface debug: no interface modules matched
+[0000aaab08c604d0] main interface error: no suitable interface module
+[0000aaab08b85270] main libvlc error: interface "globalhotkeys,none" initialization failed
+[0000aaab08c604d0] main interface debug: looking for interface module matching "dummy": 19 candidates
+[0000aaab08c604d0] dummy interface: using the dummy interface module...
+[0000aaab08c604d0] main interface debug: using interface module "dummy"
+[0000aaab08c1b140] main playlist debug: processing request item: null, node: Playlist, skip: 0
+[0000aaab08c1b140] main playlist debug: rebuilding array of current - root Playlist
+[0000aaab08c1b140] main playlist debug: rebuild done - 1 items, index -1
+[0000aaab08c1b140] main playlist debug: starting playback of new item
+[0000aaab08c1b140] main playlist debug: resyncing on udp://:5000
+[0000aaab08c1b140] main playlist debug: udp://:5000 is at 0
+[0000aaab08c1b140] main playlist debug: creating new input thread
+[0000ffffa8000ca0] main input debug: Creating an input for 'udp://:5000'
+[0000aaab08c1b140] main playlist debug: requesting art for new input thread
+[0000ffffa8000ca0] main input debug: using timeshift granularity of 50 MiB
+[0000ffffa8000ca0] main input debug: using default timeshift path
+[0000ffffa8000ca0] main input debug: `udp://@:5000' gives access `udp' demux `any' path `@:5000'
+[0000ffffac000fc0] main input source debug: creating demux: access='udp' demux='any' location='@:5000' file='(null)'
+[0000ffffac001150] main demux debug: looking for access_demux module matching "udp": 18 candidates
+[0000ffffac001150] main demux debug: no access_demux modules matched
+[0000ffffac001610] main stream debug: creating access: udp://@:5000
+[0000ffffac001610] main stream debug: looking for access module matching "udp": 29 candidates
+[0000ffffac001610] udp stream debug: opening server=:0 local=:5000
+[0000ffffac001610] main stream debug: net: opening any datagram port 5000
+[0000ffffa4000c40] main meta fetcher debug: looking for meta fetcher module matching "any": 1 candidates
+[0000ffffa4000c40] lua meta fetcher debug: Trying Lua scripts in /home/jetson/.local/share/vlc/lua/meta/fetcher
+[0000ffffa4000c40] lua meta fetcher debug: Trying Lua scripts in /usr/lib/aarch64-linux-gnu/vlc/lua/meta/fetcher
+[0000ffffa4000c40] lua meta fetcher debug: Trying Lua scripts in /usr/share/vlc/lua/meta/fetcher
+[0000ffffa4000c40] main meta fetcher debug: no meta fetcher modules matched
+[0000ffffa4000c40] main art finder debug: looking for art finder module matching "any": 2 candidates
+[0000ffffac001610] main stream debug: using access module "udp"
+[0000ffffac002970] main stream debug: looking for stream_filter module matching "prefetch,cache_block": 26 candidates
+[0000ffffa4000c40] lua art finder debug: Trying Lua scripts in /home/jetson/.local/share/vlc/lua/meta/art
+[0000ffffac002970] prefetch stream debug: using 16777216 bytes buffer, 16777216 bytes read
+[0000ffffac002970] main stream debug: using stream_filter module "prefetch"
+[0000aaab08c294e0] dbus interface debug: Getting All properties
+[0000ffffac002e80] main stream debug: looking for stream_filter module matching "any": 26 candidates
+[0000ffffa4000c40] lua art finder debug: Trying Lua scripts in /usr/lib/aarch64-linux-gnu/vlc/lua/meta/art
+[0000ffffa4000c40] lua art finder debug: Trying Lua playlist script /usr/lib/aarch64-linux-gnu/vlc/lua/meta/art/00_musicbrainz.luac
+[0000ffffa4000c40] lua art finder debug: skipping script (unmatched scope) /usr/lib/aarch64-linux-gnu/vlc/lua/meta/art/00_musicbrainz.luac
+[0000ffffa4000c40] lua art finder debug: Trying Lua playlist script /usr/lib/aarch64-linux-gnu/vlc/lua/meta/art/01_googleimage.luac
+[0000ffffa4000c40] lua art finder debug: skipping script (unmatched scope) /usr/lib/aarch64-linux-gnu/vlc/lua/meta/art/01_googleimage.luac
+[0000ffffa4000c40] lua art finder debug: Trying Lua playlist script /usr/lib/aarch64-linux-gnu/vlc/lua/meta/art/02_frenchtv.luac
+[0000ffffa4000c40] lua art finder debug: skipping script (unmatched scope) /usr/lib/aarch64-linux-gnu/vlc/lua/meta/art/02_frenchtv.luac
+[0000ffffa4000c40] lua art finder debug: Trying Lua playlist script /usr/lib/aarch64-linux-gnu/vlc/lua/meta/art/03_lastfm.luac
+[0000ffffa4000c40] lua art finder debug: skipping script (unmatched scope) /usr/lib/aarch64-linux-gnu/vlc/lua/meta/art/03_lastfm.luac
+[0000ffffa4000c40] lua art finder debug: Trying Lua scripts in /usr/share/vlc/lua/meta/art
+[0000ffffa4000c40] main art finder debug: no art finder modules matched
+[0000ffffa4000c40] main meta fetcher debug: looking for meta fetcher module matching "any": 1 candidates
+[0000ffffa4000c40] lua meta fetcher debug: Trying Lua scripts in /home/jetson/.local/share/vlc/lua/meta/fetcher
+[0000ffffa4000c40] lua meta fetcher debug: Trying Lua scripts in /usr/lib/aarch64-linux-gnu/vlc/lua/meta/fetcher
+[0000ffffa4000c40] lua meta fetcher debug: Trying Lua scripts in /usr/share/vlc/lua/meta/fetcher
+[0000ffffa4000c40] main meta fetcher debug: no meta fetcher modules matched
+[0000ffffa4000c40] main art finder debug: looking for art finder module matching "any": 2 candidates
+[0000ffffa4000c40] lua art finder debug: Trying Lua scripts in /home/jetson/.local/share/vlc/lua/meta/art
+[0000ffffa4000c40] lua art finder debug: Trying Lua scripts in /usr/lib/aarch64-linux-gnu/vlc/lua/meta/art
+[0000ffffa4000c40] lua art finder debug: Trying Lua playlist script /usr/lib/aarch64-linux-gnu/vlc/lua/meta/art/00_musicbrainz.luac
+[0000ffffa4000c40] lua art finder debug: Trying Lua playlist script /usr/lib/aarch64-linux-gnu/vlc/lua/meta/art/01_googleimage.luac
+[0000ffffa4000c40] lua art finder debug: Trying Lua playlist script /usr/lib/aarch64-linux-gnu/vlc/lua/meta/art/02_frenchtv.luac
+[0000ffffa4000c40] lua art finder debug: Trying Lua playlist script /usr/lib/aarch64-linux-gnu/vlc/lua/meta/art/03_lastfm.luac
+[0000ffffa4000c40] lua art finder debug: Trying Lua scripts in /usr/share/vlc/lua/meta/art
+[0000ffffa4000c40] main art finder debug: no art finder modules matched
+[0000aaab08c294e0] dbus interface debug: Getting All properties
+[0000aaab08c294e0] dbus interface debug: Getting All properties
+[0000ffffac002e80] lua stream debug: Trying Lua scripts in /home/jetson/.local/share/vlc/lua/playlist
+[0000ffffac002e80] lua stream debug: Trying Lua scripts in /usr/lib/aarch64-linux-gnu/vlc/lua/playlist
+[0000ffffac002e80] lua stream debug: Trying Lua playlist script /usr/lib/aarch64-linux-gnu/vlc/lua/playlist/anevia_streams.luac
+[0000ffffac002e80] lua stream debug: Trying Lua playlist script /usr/lib/aarch64-linux-gnu/vlc/lua/playlist/anevia_xml.luac
+[0000ffffac002e80] lua stream debug: Trying Lua playlist script /usr/lib/aarch64-linux-gnu/vlc/lua/playlist/appletrailers.luac
+[0000ffffac002e80] lua stream debug: Trying Lua playlist script /usr/lib/aarch64-linux-gnu/vlc/lua/playlist/bbc_co_uk.luac
+[0000ffffac002e80] lua stream debug: Trying Lua playlist script /usr/lib/aarch64-linux-gnu/vlc/lua/playlist/cue.luac
+[0000ffffac002e80] lua stream debug: Trying Lua playlist script /usr/lib/aarch64-linux-gnu/vlc/lua/playlist/dailymotion.luac
+[0000ffffac002e80] lua stream debug: Trying Lua playlist script /usr/lib/aarch64-linux-gnu/vlc/lua/playlist/jamendo.luac
+[0000ffffac002e80] lua stream debug: Trying Lua playlist script /usr/lib/aarch64-linux-gnu/vlc/lua/playlist/koreus.luac
+[0000ffffac002e80] lua stream debug: Trying Lua playlist script /usr/lib/aarch64-linux-gnu/vlc/lua/playlist/liveleak.luac
+[0000ffffac002e80] lua stream debug: Trying Lua playlist script /usr/lib/aarch64-linux-gnu/vlc/lua/playlist/newgrounds.luac
+[0000ffffac002e80] lua stream debug: Trying Lua playlist script /usr/lib/aarch64-linux-gnu/vlc/lua/playlist/rockbox_fm_presets.luac
+[0000ffffac002e80] lua stream debug: Trying Lua playlist script /usr/lib/aarch64-linux-gnu/vlc/lua/playlist/soundcloud.luac
+[0000ffffac002e80] lua stream debug: Trying Lua playlist script /usr/lib/aarch64-linux-gnu/vlc/lua/playlist/twitch.luac
+[0000ffffac002e80] lua stream debug: Trying Lua playlist script /usr/lib/aarch64-linux-gnu/vlc/lua/playlist/vimeo.luac
+[0000ffffac002e80] lua stream debug: Trying Lua playlist script /usr/lib/aarch64-linux-gnu/vlc/lua/playlist/vocaroo.luac
+[0000ffffac002e80] lua stream debug: Trying Lua playlist script /usr/lib/aarch64-linux-gnu/vlc/lua/playlist/youtube.luac
+[0000ffffac002e80] lua stream debug: Trying Lua scripts in /usr/share/vlc/lua/playlist
+[0000ffffac002e80] main stream debug: no stream_filter modules matched
+[0000ffffac00cb80] main stream_directory debug: looking for stream_directory module matching "any": 1 candidates
+[0000ffffac00cb80] main stream_directory debug: no stream_directory modules matched
+[0000ffffac000fc0] main input source debug: attachment of directory-extractor failed for udp://@:5000
+[0000ffffac002e80] main stream debug: looking for stream_filter module matching "record": 26 candidates
+[0000ffffac002e80] main stream debug: using stream_filter module "record"
+[0000ffffac000fc0] main input source debug: creating demux: access='udp' demux='any' location='@:5000' file='(null)'
+[0000ffffac01a0a0] main demux debug: looking for demux module matching "any": 54 candidates
+[0000ffffac0192a0] main xml reader debug: looking for xml reader module matching "any": 1 candidates
+[0000ffffac0192a0] main xml reader debug: using xml reader module "xml"
+[0000ffffac01a0a0] webvtt demux debug: subtitle demux discarded
+[0000ffffac01a0a0] mod demux debug: MOD validation failed (ext=)
+[0000ffffac01a0a0] ts demux debug: Standard set to Auto
+[0000ffffac01a0a0] main demux debug: using demux module "ts"
+[0000ffffac01a0a0] ts demux debug: DEMUX_SET_GROUP 0 (nil)
+[0000ffffac018cf0] main demux meta debug: looking for meta reader module matching "any": 2 candidates
+[0000ffffac018cf0] lua demux meta debug: Trying Lua scripts in /home/jetson/.local/share/vlc/lua/meta/reader
+[0000ffffac018cf0] lua demux meta debug: Trying Lua scripts in /usr/lib/aarch64-linux-gnu/vlc/lua/meta/reader
+[0000ffffac018cf0] lua demux meta debug: Trying Lua playlist script /usr/lib/aarch64-linux-gnu/vlc/lua/meta/reader/filename.luac
+[0000ffffac018cf0] lua demux meta debug: Trying Lua scripts in /usr/share/vlc/lua/meta/reader
+[0000ffffac018cf0] main demux meta debug: no meta reader modules matched
+[0000ffffa8000ca0] main input debug: `udp://@:5000' successfully opened
+[0000ffffac01a0a0] ts demux debug: pid[65] unknown
+[0000ffffac01a0a0] ts demux debug: first packet for pid=65 cc=0xa
+[0000ffffac01a0a0] ts demux debug: first packet for pid=0 cc=0xf
+[0000ffffac01a0a0] ts demux debug: PATCallBack called
+[0000ffffac01a0a0] ts demux debug: new PAT ts_id=1 version=0 current_next=1
+[0000ffffac01a0a0] ts demux debug:   * number=1 pid=32
+[0000ffffac01a0a0] ts demux debug: temporary receiving program 1
+[0000ffffac01a0a0] ts demux debug: first packet for pid=32 cc=0xf
+[0000ffffac01a0a0] ts demux debug: PMTCallBack called for program 1
+[0000ffffac01a0a0] ts demux debug: new PMT program number=1 version=0 pid_pcr=65
+[0000ffffac01a0a0] ts demux debug:   * pid=65 type=0x1b AVC video stream as defined in ITU-T Rec. H.264
+[0000ffffac01a0a0] ts demux debug:     - ES descriptor tag 0x5
+[0000ffffac01a0a0] ts demux debug:    => pid 65 has now es fcc=h264
+[0000ffffa8000ca0] main input debug: selecting program id=1
+[0000ffffac02b250] main packetizer debug: looking for packetizer module matching "any": 25 candidates
+[0000ffffac02b250] main packetizer debug: using packetizer module "h264"
+[0000ffffac028280] main decoder debug: looking for video decoder module matching "any": 15 candidates
+[0000ffffac028280] avcodec decoder debug: using ffmpeg Lavc58.134.100
+[0000ffffac028280] avcodec decoder debug: CPU flags: 0x00000068
+[0000ffffac028280] avcodec decoder debug: allowing 6 thread(s) for decoding
+[0000ffffac028280] avcodec decoder debug: codec (h264) started
+[0000ffffac028280] avcodec decoder debug: using frame thread mode with 6 threads
+[0000ffffac028280] main decoder debug: using video decoder module "avcodec"
+[0000ffffac01a0a0] ts demux debug: Default program is 1
+[0000ffffac01a0a0] ts demux debug:   * pid=17 listening for SDT
+[0000ffffac01a0a0] ts demux debug: enabling pid 65 from program 1
+[0000ffffac01a0a0] ts demux debug: enabling pcr pid 65 from program 1
+[0000ffffac01a0a0] ts demux debug: first packet for pid=65 cc=0x5
+[0000ffffa8000ca0] main input debug: Buffering 0%
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffa8000ca0] main input debug: Buffering 48%
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffa8000ca0] main input debug: Buffering 99%
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffa8000ca0] main input debug: Stream buffering done (150 ms in 154 ms)
+[0000ffffac028280] main decoder error: buffer deadlock prevented
+[0000ffffa8000ca0] main input debug: Decoder wait done in 0 ms
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer warning: waiting for SPS/PPS
+[0000ffffac02b250] h264 packetizer debug: found NAL_SPS (sps_id=0)
+[0000ffffac02b250] h264 packetizer debug: found NAL_PPS (pps_id=0 sps_id=0)
+[0000ffffac028280] main decoder debug: restarting module due to input format change
+[0000ffffac028280] main decoder debug: removing module "avcodec"
+[0000ffffac028280] main decoder debug: looking for video decoder module matching "any": 15 candidates
+[0000ffffac028280] avcodec decoder debug: using ffmpeg Lavc58.134.100
+[0000ffffac028280] avcodec decoder debug: CPU flags: 0x00000068
+[0000ffffac028280] avcodec decoder debug: allowing 6 thread(s) for decoding
+[0000ffffac028280] avcodec decoder debug: codec (h264) started
+[0000ffffac028280] avcodec decoder debug: using frame thread mode with 6 threads
+[0000ffffac028280] main decoder debug: using video decoder module "avcodec"
+[0000ffffac028280] avcodec decoder debug: available hardware decoder output format 100 (vdpau)
+[0000ffffac028280] avcodec decoder debug: available hardware decoder output format 119 (cuda)
+[0000ffffac028280] avcodec decoder debug: available hardware decoder output format 46 (vaapi_vld)
+[0000ffffac028280] avcodec decoder debug: available software decoder output format 0 (yuv420p)
+[0000ffffac028280] avcodec decoder debug: trying format vaapi_vld
+[0000ffff8c085580] main spu text debug: looking for text renderer module matching "any": 2 candidates
+[0000ffff8c085580] freetype spu text debug: Building font databases.
+[0000ffff8c085580] freetype spu text debug: Took -17913 microseconds
+[0000ffff8c085580] main spu text debug: using text renderer module "freetype"
+[0000ffff8c1019a0] main scale debug: looking for video converter module matching "any": 17 candidates
+[0000ffff8c1019a0] swscale scale debug: 32x32 (32x32) chroma: YUVA -> 16x16 (16x16) chroma: RGBA with scaling using Bicubic (good quality)
+[0000ffff8c1019a0] main scale debug: using video converter module "swscale"
+[0000ffff8c0f4380] main scale debug: looking for video converter module matching "any": 17 candidates
+[0000ffff8c0f4380] yuvp scale debug: YUVP to YUVA converter
+[0000ffff8c0f4380] main scale debug: using video converter module "yuvp"
+[0000ffff8c0572e0] main video output debug: Deinterlacing available
+[0000ffff8c0572e0] main video output debug: deinterlace -1, mode auto, is_needed 0
+[0000ffff8c0eadb0] main window debug: looking for vout window module matching "any": 6 candidates
+[0000ffff8c0eadb0] main window debug: no vout window modules matched
+[0000ffff8c0572e0] main video output debug: Opening vout display wrapper
+[0000ffff840013f0] main vout display debug: looking for vout display module matching "dummy": 14 candidates
+[0000ffff840013f0] main vout display debug: using vout display module "vdummy"
+[0000ffff8c0572e0] main video output debug: original format sz 1280x720, of (0,0), vsz 1280x720, 4cc VAOP, sar 1:1, msk r0x0 g0x0 b0x0
+[0000ffff840013f0] main vout display debug: VoutDisplayEvent 'resize' 1280x720
+[0000ffff8c085580] main spu text debug: removing module "freetype"
+[0000ffff8c085580] main spu text debug: looking for text renderer module matching "any": 2 candidates
+[0000ffff8c085580] freetype spu text debug: Building font databases.
+[0000ffff8c085580] freetype spu text debug: Took -17471 microseconds
+[0000ffff8c085580] main spu text debug: using text renderer module "freetype"
+[0000ffff8c09e660] main generic debug: looking for hw decoder module matching "any": 3 candidates
+[0000ffff8c09e660] main generic debug: no hw decoder modules matched
+[0000ffffac028280] avcodec decoder debug: trying format vdpau
+[0000ffff840013f0] main vout display debug: removing module "vdummy"
+[0000ffff8c0572e0] main video output debug: deinterlace -1, mode auto, is_needed 0
+[0000ffff8c0572e0] main video output debug: Opening vout display wrapper
+[0000ffff840013f0] main vout display debug: looking for vout display module matching "dummy": 14 candidates
+[0000ffff840013f0] main vout display debug: using vout display module "vdummy"
+[0000ffff8c0572e0] main video output debug: original format sz 1280x720, of (0,0), vsz 1280x720, 4cc VDV0, sar 1:1, msk r0x0 g0x0 b0x0
+[0000aaab08c1b140] main playlist debug: reusing provided vout
+[0000ffff8c09e660] main generic debug: looking for hw decoder module matching "any": 3 candidates
+[0000ffff8c09e660] main generic debug: no hw decoder modules matched
+[h264 @ 0xffffa4001f60] Reinit context to 1280x720, pix_fmt: yuv420p
+[0000ffff840013f0] main vout display debug: removing module "vdummy"
+[0000ffff8c0572e0] main video output debug: deinterlace -1, mode auto, is_needed 0
+[0000ffff8c0572e0] main video output debug: Opening vout display wrapper
+[0000ffff840013f0] main vout display debug: looking for vout display module matching "dummy": 14 candidates
+[0000ffff840013f0] main vout display debug: using vout display module "vdummy"
+[0000ffff8c0572e0] main video output debug: original format sz 1280x738, of (0,0), vsz 1280x720, 4cc I420, sar 1:1, msk r0x0 g0x0 b0x0
+[0000aaab08c1b140] main playlist debug: reusing provided vout
+[0000ffff840013f0] main vout display debug: VoutDisplayEvent 'resize' 1280x720
+[0000ffff840013f0] main vout display debug: auto hiding mouse cursor
+[0000ffffa8000ca0] main input debug: EOF reached
+[0000ffffa8000ca0] main input debug: waiting decoder fifos to empty
+[0000ffffa8000ca0] main input debug: waiting decoder fifos to empty
+[0000ffffac028280] main decoder debug: killing decoder fourcc `h264'
+[0000ffffac028280] main decoder debug: removing module "avcodec"
+[0000aaab08c1b140] main playlist debug: saving a free vout
+[0000aaab08c1b140] main playlist debug: reusing provided vout
+[0000ffffac02b250] main packetizer debug: removing module "h264"
+[0000ffffac01a0a0] main demux debug: removing module "ts"
+[0000ffffa8000ca0] main input debug: Program doesn't contain anymore ES
+[0000ffffac002e80] main stream debug: removing module "record"
+[0000ffffac002970] main stream debug: removing module "prefetch"
+[0000ffffac002970] prefetch stream debug: end of stream
+[0000ffffac001610] main stream debug: removing module "udp"
+[0000aaab08c1b140] main playlist debug: dead input
+[0000aaab08c1b140] main playlist debug: changing item without a request (current 0/1)
+[0000aaab08c1b140] main playlist debug: nothing to play
+[0000aaab08c1b140] main playlist: end of playlist, exiting
+[0000aaab08b85270] main libvlc debug: exiting
+[0000ffff8c0572e0] main video output debug: destroying useless vout
+[0000aaab08b85270] main libvlc debug: exiting
+[0000ffff840013f0] main vout display debug: removing module "vdummy"
+[0000aaab08b85270] main libvlc debug: removing all interfaces
+[0000aaab08c604d0] main interface debug: removing module "dummy"
+[0000aaab08c5fb30] main interface debug: removing module "hotkeys"
+[0000aaab08c294e0] main interface debug: removing module "dbus"
+[0000aaab08c1b140] main playlist debug: destroying
+[0000aaab08c1b140] main playlist debug: deactivating the playlist
+[0000ffff8c085580] main spu text debug: removing module "freetype"
+[0000ffff8c0f4380] main scale debug: removing module "yuvp"
+[0000ffff8c1019a0] main scale debug: removing module "swscale"
+[0000aaab08c55790] main audio output debug: removing module "adummy"
+[0000aaab08c207d0] main playlist export debug: saving media library to file /home/jetson/.local/share/vlc/ml.xspf.tmp10210
+[0000aaab08c207d0] main playlist export debug: looking for playlist export module matching "export-xspf": 4 candidates
+[0000aaab08c207d0] main playlist export debug: using playlist export module "export"
+[0000aaab08c207d0] main playlist export debug: removing module "export"
+[0000aaab08c1b140] main playlist debug: deleting item `Media Library'
+[0000aaab08c1b140] main playlist debug: deleting item `udp://:5000'
+[0000aaab08c1b140] main playlist debug: deleting item `Playlist'
+[0000aaab08c20a40] main keystore debug: removing module "memory"

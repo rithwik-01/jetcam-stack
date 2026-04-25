@@ -1,0 +1,15 @@
+# host=jetson@JETSON_IP
+# collected_at=2026-08-07T03:46:04-0600
+# generated_by=scripts/collect-baseline.sh
+
+nvargus_nvraw version 1.17.0
+Number of supported sensor entries 5
+Entry  Source Mode      Uniquename             Resolution   FR  BitDepth  Mode
+Index  Index  Index                                             CSI Dyn   Type
+  0      0      0           jakku_rear_RBP194   3280x2464   20  10  10    Bayer       
+  1      0      1           jakku_rear_RBP194   3280x1848   28  10  10    Bayer       
+  2      0      2           jakku_rear_RBP194   1920x1080   29  10  10    Bayer       
+  3      0      3           jakku_rear_RBP194   1640x1232   29  10  10    Bayer       
+  4      0      4           jakku_rear_RBP194   1280x 720   59  10  10    Bayer       
+
+# ssh_exit_status=0

@@ -1,0 +1,54 @@
+mode=1920x1080@30
+state=STREAMING url=udp://127.0.0.1:5000
+snapshot=requested file=/tmp/jetcam-stage4-smoke-final/1080p30-snapshot.jpg
+snapshot=saved file=/tmp/jetcam-stage4-smoke-final/1080p30-snapshot.jpg
+metric=frames frames=150 fps=25.6249
+metric=frames frames=300 fps=29.9999
+metric=frames frames=450 fps=30.0001
+state=STOPPED frames=553
+mode=1280x720@60
+state=STREAMING url=udp://127.0.0.1:5000
+snapshot=requested file=/tmp/jetcam-stage4-smoke-final/720p60-snapshot.jpg
+snapshot=saved file=/tmp/jetcam-stage4-smoke-final/720p60-snapshot.jpg
+metric=frames frames=307 fps=51.6081
+metric=frames frames=607 fps=59.9997
+metric=frames frames=908 fps=60.2002
+state=STOPPED frames=1113
+mode=1280x720@60
+state=STREAMING url=rtsp://0.0.0.0:8554/jetcam
+[0000ffff7801af50] main demux debug: using demux module "ts"
+[0000ffff7802b2b0] avcodec decoder debug: codec (h264) started
+[0000ffff7802b2b0] main decoder debug: using video decoder module "avcodec"
+[0000ffff7802b2b0] avcodec decoder debug: codec (h264) started
+[0000ffff7802b2b0] main decoder debug: using video decoder module "avcodec"
+[0000ffffa801a5a0] main demux debug: using demux module "ts"
+[0000ffffa802b200] avcodec decoder debug: codec (h264) started
+[0000ffffa802b200] main decoder debug: using video decoder module "avcodec"
+[0000ffffa802b200] avcodec decoder debug: codec (h264) started
+[0000ffffa802b200] main decoder debug: using video decoder module "avcodec"
+Setting pipeline to PAUSED ...
+Pipeline is live and does not need PREROLL ...
+Progress: (open) Opening Stream
+Pipeline is PREROLLED ...
+Prerolled, waiting for progress to finish...
+Progress: (connect) Connecting to rtsp://127.0.0.1:8554/jetcam
+Progress: (open) Retrieving server options
+Progress: (open) Retrieving media info
+Progress: (request) SETUP stream 0
+Progress: (open) Opened Stream
+Setting pipeline to PLAYING ...
+New clock: GstSystemClock
+Progress: (request) Sending PLAY request
+Progress: (request) Sending PLAY request
+Progress: (request) Sent PLAY request
+Redistribute latency...
+Redistribute latency...
+handling interrupt.
+Interrupt: Stopping pipeline ...
+EOS on shutdown enabled -- Forcing EOS on the pipeline
+Waiting for EOS...
+Got EOS from element "pipeline0".
+EOS received - stopping pipeline...
+Execution ended after 0:00:10.093181678
+Setting pipeline to NULL ...
+Freeing pipeline ...

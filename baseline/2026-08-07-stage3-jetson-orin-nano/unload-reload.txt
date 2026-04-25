@@ -1,0 +1,13 @@
+before_unload:
+nv_imx219 20480 0
+
+after_unload:
+module=unloaded
+/dev/video0=absent
+
+after_reload:
+nv_imx219 20480 0
+/dev/video0=present
+test_pattern: 0 (Disabled)
+
+RESULT status=PASS frames=120 first_sequence=0 last_sequence=119 dropped=0 discontinuities=0 buffer_errors=0 capture_seconds=1.980 wall_seconds=2.032 actual_fps=60.116 requested_fps=60.000 negotiated_fps=60.000 width=1280 height=720 fourcc=RG10 snapshot_saved=false
